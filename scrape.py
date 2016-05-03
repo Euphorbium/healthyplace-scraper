@@ -44,7 +44,7 @@ def scrape_sub(sub):
         for reply in scrape_thread(normal):
             replies.append(reply)
         if thread_pages > 1:
-            for thread_page in xrange(1, thread_pages+1):
+            for thread_page in xrange(1, thread_pages):
                 for reply in scrape_thread(normal+'?p='+str(thread_page)):
                     replies.append(reply)
         for i, reply in enumerate(replies):
