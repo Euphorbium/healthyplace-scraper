@@ -3,6 +3,9 @@ import unicodecsv
 from lxml import html
 from retrying import retry
 import re
+import sys
+reload(sys)
+sys.setdefaultencoding('UTF8')
 
 
 @retry(wait_random_min=5000, wait_random_max=10000)
